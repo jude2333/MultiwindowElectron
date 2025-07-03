@@ -2,16 +2,32 @@
   "name": "multiwindow",
   "version": "1.0.0",
   "main": "main.js",
-  "scripts": {
-    "start": "electron .",
-    "build": "electron-packager . electron-launcher --platform=win32 --arch=x64 --out=dist --overwrite"
-  },
-  "keywords": [],
+  "description": "",
   "author": "",
   "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "electron": "^36.3.1",
-    "electron-packager": "^17.1.2"
-  }
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.example.multiwindow",
+    "productName": "Multiwindow",
+    "files": [
+      "**/*",
+      "!node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+      "!**/node_modules/.bin",
+      "!**/*.{map,md,ts}",
+      "!dist"
+    ],
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    }
+  },
+"devDependencies": {
+  "electron": "^36.3.1",
+  "electron-builder": "^24.6.0"
+}
 }
