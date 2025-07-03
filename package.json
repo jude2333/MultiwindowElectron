@@ -1,0 +1,17 @@
+{
+  "name": "multiwindow",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . electron-launcher --platform=win32 --arch=x64 --out=dist --overwrite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "^36.3.1",
+    "electron-packager": "^17.1.2"
+  }
+}
