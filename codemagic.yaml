@@ -7,6 +7,7 @@ workflows:
       vars:
         NODE_ENV: production
     scripts:
+      - rm -rf node_modules package-lock.json  
       - npm install
       - npm run dist:mac
     artifacts:
