@@ -15,7 +15,8 @@
     },
     "mac": {
       "target": "dmg"
-    }
+    },
+    "publish": null
   },
   "dependencies": {},
   "devDependencies": {
