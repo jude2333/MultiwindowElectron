@@ -7,12 +7,8 @@ workflows:
       vars:
         NODE_ENV: production
     scripts:
-      - name: Install dependencies
-        script: |
-          npm ci
-          npm install -g electron-builder
-      - name: Build the app
-        script: npm run dist
+      - npm install
+      - npm run dist
     artifacts:
       - dist/**/*.dmg
       - dist/**/*.zip
