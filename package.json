@@ -17,10 +17,9 @@
       "target": "dmg"
     }
   },
-  "dependencies": {
-    "electron": "36.3.1"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "electron": "36.3.1",
     "electron-builder": "24.13.3",
     "electron-packager": "17.1.2"
   },
