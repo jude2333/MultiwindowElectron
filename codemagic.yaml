@@ -1,19 +1,30 @@
-workflows:
-  build_macos:
-    name: Build Electron App for macOS
-    instance_type: mac_mini_m2
-    max_build_duration: 30
-    environment:
-      vars:
-        NODE_ENV: production
-    scripts:
-      - rm -rf node_modules package-lock.json
-      - npm install
-      - npm run dist:mac
-    artifacts:
-      - dist/*.dmg
-      - dist/*.zip
-      - dist/mac/*.app
-    cache:
-      cache_paths:
-        - $HOME/.npm
+{
+  "name": "multiwindow",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . electron-launcher --platform=win32 --arch=x64 --out=dist --overwrite",
+    "dist:mac": "npx electron-builder --mac"
+  },
+  "build": {
+    "appId": "com.yourcompany.multiwindow",
+    "productName": "MultiWindow",
+    "directories": {
+      "output": "dist"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "publish": null
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "36.3.1",
+    "electron-builder": "24.13.3",
+    "electron-packager": "17.1.2"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "description": "Electron multi-window application"
+}
