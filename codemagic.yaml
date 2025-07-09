@@ -8,11 +8,11 @@ workflows:
         NODE_ENV: production
     scripts:
       - npm install
-      - npm run dist
+      - npm run dist:mac
     artifacts:
-      - dist/**/*.dmg
-      - dist/**/*.zip
-      - dist/**/*.app
+      - dist/*.dmg
+      - dist/*.zip
+      - dist/mac/*.app
     cache:
       cache_paths:
         - $HOME/.npm
