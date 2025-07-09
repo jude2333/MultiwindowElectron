@@ -8,7 +8,7 @@
     "dist:mac": "npx electron-builder --mac"
   },
   "build": {
-    "appId": "com.yourcompany.multiwindow",
+    "appId": "com.anderson.multiwindow",
     "productName": "MultiWindow",
     "directories": {
       "output": "dist"
@@ -29,7 +29,7 @@
     "electron-builder": "24.13.3",
     "electron-packager": "17.1.2"
   },
-  "author": "Your Name",
+  "author": "jude2333",
   "license": "ISC",
   "description": "Electron multi-window application"
 }
