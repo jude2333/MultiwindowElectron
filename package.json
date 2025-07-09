@@ -5,7 +5,7 @@
   "scripts": {
     "start": "electron .",
     "build": "electron-packager . electron-launcher --platform=win32 --arch=x64 --out=dist --overwrite",
-    "dist:mac": "electron-builder --mac"
+    "dist:mac": "npx electron-builder --mac"
   },
   "build": {
     "appId": "com.yourcompany.multiwindow",
