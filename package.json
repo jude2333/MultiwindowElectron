@@ -5,7 +5,6 @@
   "scripts": {
     "start": "electron .",
     "build": "electron-packager . electron-launcher --platform=win32 --arch=x64 --out=dist --overwrite",
-    "dist": "electron-builder",
     "dist:mac": "electron-builder --mac"
   },
   "build": {
@@ -15,13 +14,17 @@
       "output": "dist"
     },
     "mac": {
-      "target": "dmg",
-      "icon": "assets/icon.icns"
+      "target": "dmg"
     }
   },
+  "dependencies": {
+    "electron": "36.3.1"
+  },
   "devDependencies": {
-    "electron": "^36.3.1",
-    "electron-builder": "^24.13.3",
-    "electron-packager": "^17.1.2"
-  }
+    "electron-builder": "24.13.3",
+    "electron-packager": "17.1.2"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "description": "Electron multi-window application"
 }

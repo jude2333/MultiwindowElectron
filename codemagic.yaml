@@ -7,8 +7,8 @@ workflows:
       vars:
         NODE_ENV: production
     scripts:
+      - rm -rf node_modules package-lock.json
       - npm install
-      - npm install electron-builder --save-dev
       - npm run dist:mac
     artifacts:
       - dist/*.dmg
