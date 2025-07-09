@@ -5,11 +5,11 @@
   "scripts": {
     "start": "electron .",
     "build": "electron-packager . electron-launcher --platform=win32 --arch=x64 --out=dist --overwrite",
-    "dist": "electron-builder",
-    "dist:mac": "electron-builder --mac"
+    "dist": "npx electron-builder",
+    "dist:mac": "npx electron-builder --mac"
   },
   "build": {
-    "appId": "com.anderson.multiwindow",
+    "appId": "com.yourcompany.multiwindow",
     "productName": "MultiWindow",
     "directories": {
       "output": "dist"
